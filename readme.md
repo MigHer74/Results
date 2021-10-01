@@ -10,6 +10,8 @@ After enter the data of each week, the program gives the numbers who has 2, 3, 4
 
 The file named "minis.py" contains functions.
 
+The file named "results.txt" contains all the numbers of the last 6 weeks.
+
 I'm using lists and statements if, elif and for.
 
 The program is still growing, so I'm going to still update the progress.
