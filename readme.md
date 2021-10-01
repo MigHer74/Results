@@ -8,6 +8,8 @@ The 36 numbers are separated in 6 list of 6 numbers each, each list is the weekl
 
 After enter the data of each week, the program gives the numbers who has 2, 3, 4 and 5 or more repetitions of that 36 numbers separately.
 
+The file named "minis.py" contains functions.
+
 I'm using lists and statements if, elif and for.
 
 The program is still growing, so I'm going to still update the progress.
@@ -16,7 +18,7 @@ The program is still growing, so I'm going to still update the progress.
 ## Project Files
 - readme.md
 - results.py
-- results.txt
+- minis.py
 
 ## Project Directories
 There are no directories at this moment
