@@ -1,52 +1,24 @@
 import minis as fm
 
-# Ask to the user to enter the 6 numbers of the last week
-n1 = input("Enter the first number...: ")
-n2 = input("Enter the second number..: ")
-n3 = input("Enter the third number...: ")
-n4 = input("Enter the fourth number..: ")
-n5 = input("Enter the fifth number...: ")
-n6 = input("Enter the sixth number...: ")
+# Main Menu - The user select the type of game
+sel = input("Please select the game you want to analyse (N - Normal | L - Long | X - Salir): ")
 
-new_numbers = ("{},{},{},{},{},{}\n".format(n1,n2,n3,n4,n5,n6))
+if sel == "N":
+    numbers = fm.enter_data(1)
+    numbers = fm.review_file("N",numbers,0,0)
+    numbers = fm.convertion(numbers)
+elif sel == "L":
+    a = fm.enter_data(1)
+    b = fm.enter_data(2)
+    c = fm.enter_data(3)
 
-# Open the file to read the previous numbers and  insert the numbers of the last week
-lr = []
-ac_file = open("results.txt","r")
-
-for i in ac_file:
-    lr.append(i)
-
-ac_file.close()
-
-nl0 = new_numbers
-nl1 = lr[0]
-nl2 = lr[1]
-nl3 = lr[2]
-nl4 = lr[3]
-nl5 = lr[4]
-
-nw_file = open("results.txt","w")
-
-nw_file.write(nl0)
-nw_file.write(nl1)
-nw_file.write(nl2)
-nw_file.write(nl3)
-nw_file.write(nl4)
-nw_file.write(nl5)
-
-nw_file.close()
-
-r1 = convertion(nl0)
-r2 = convertion(nl1)
-r3 = convertion(nl2)
-r4 = convertion(nl3)
-r5 = convertion(nl4)
-r6 = convertion(nl5)
-a1 = [100]
+    d = fm.review_file("L",a,b,c)
+    numbers = fm.convertion(d)
+    print(numbers)
+else:
+    quit()
 
 # Create and sort a variable concatenating the 6 lists plus the "a1" special list.
-numbers = r1 + r2 + r3 + r4 + r5 + r6 + a1
 numbers.sort()
 
 # Initializing the variables "number", "count" and the result lists; "number" and "count" are the variables who controls the number of repetitions.
