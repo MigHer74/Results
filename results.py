@@ -1,4 +1,4 @@
-from minis import convertion
+import minis as fm
 
 # Ask to the user to enter the 6 numbers of the last week
 n1 = input("Enter the first number...: ")
