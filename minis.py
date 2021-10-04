@@ -1,10 +1,12 @@
 # This function converts a string into a list
-def convertion(values):
-    l1 = []
+def convertion(tolist):
+    ls = []
 
-    values = values.split(",")
+    for i1 in range(len(tolist)):
+        values = tolist[i1]
+        values = values.split(",")
+        
+        for i2 in values:
+            ls.append(int(i2))
 
-    for i in values:
-        l1.append(int(i))
-
-    return l1
+    return ls
