@@ -116,4 +116,6 @@ def convertion(tolist):
         for i2 in values:
             ls.append(int(i2))
 
+    ls.append(100)
+
     return ls
