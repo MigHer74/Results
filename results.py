@@ -29,6 +29,7 @@ n2 = []
 n3 = []
 n4 = []
 n5 = []
+n6 = []
 
 # The core of the program; here makes the comparison, count the numbers and divide in repetitions.
 for selection in range(len(numbers)):    
