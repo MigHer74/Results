@@ -76,7 +76,13 @@ else:
         number = numbers[selection]
 
 # Shows the numbers divide it in 4 groups.
-print("Numbers with 5 or more repetitions:", n5)
-print("Numbers with 4 repetitions........:", n4)
-print("Numbers with 3 repetitions........:", n3)
-print("Numbers with 2 repetitions........:", n2)
+if sel == "N":
+    print("Numbers with 5 or more repetitions:", n5)
+    print("Numbers with 4 repetitions........:", n4)
+    print("Numbers with 3 repetitions........:", n3)
+    print("Numbers with 2 repetitions........:", n2)
+else:
+    print("Numbers with 6 or more repetitions:", n6)
+    print("Numbers with 5 repetitions........:", n5)
+    print("Numbers with 4 repetitions........:", n4)
+    print("Numbers with 3 repetitions........:", n3)
