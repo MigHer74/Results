@@ -32,26 +32,48 @@ n5 = []
 n6 = []
 
 # The core of the program; here makes the comparison, count the numbers and divide in repetitions.
-for selection in range(len(numbers)):    
-    if number == numbers[selection]:
-        count += 1
-    else:
-        if count == 2:
-            n2.append(number)
-            count = 1
-        elif count == 3:
-            n3.append(number)
-            count = 1
-        elif count == 4:
-            n4.append(number)
-            count = 1
-        elif count >= 5:
-            n5.append(number)
-            count = 1            
+if sel == "N":
+    for selection in range(len(numbers)):
+        if number == numbers[selection]:
+            count += 1
         else:
-            count = 1
+            if count == 2:
+                n2.append(number)
+                count = 1
+            elif count == 3:
+                n3.append(number)
+                count = 1
+            elif count == 4:
+                n4.append(number)
+                count = 1
+            elif count >= 5:
+                n5.append(number)
+                count = 1            
+            else:
+                count = 1
 
-    number = numbers[selection]
+        number = numbers[selection]
+else:
+    for selection in range(len(numbers)):
+        if number == numbers[selection]:
+            count += 1
+        else:
+            if count == 3:
+                n3.append(number)
+                count = 1
+            elif count == 4:
+                n4.append(number)
+                count = 1
+            elif count == 5:
+                n5.append(number)
+                count = 1
+            elif count >= 6:
+                n6.append(number)
+                count = 1            
+            else:
+                count = 1
+
+        number = numbers[selection]
 
 # Shows the numbers divide it in 4 groups.
 print("Numbers with 5 or more repetitions:", n5)
