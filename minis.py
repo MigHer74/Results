@@ -26,12 +26,9 @@ def review_file(game,nw1,nw2,nw3):
     lr = []
 
     if game == "N":
-        ac_file = open("res_n.txt","r")
-
-        for i in ac_file:
-            lr.append(i)
-
-        ac_file.close()
+        with open("res_n.txt","r") as ac_file:
+            for i in ac_file:
+                lr.append(i)
 
         nl0  = nw1
         nl1  = lr[0]
@@ -40,12 +37,9 @@ def review_file(game,nw1,nw2,nw3):
         nl4  = lr[3]
         nl5  = lr[4]
     else:
-        ac_file = open("res_l.txt","r")
-
-        for i in ac_file:
-            lr.append(i)
-
-        ac_file.close()
+        with open("res_l.txt","r") as ac_file:
+            for i in ac_file:
+                lr.append(i)
 
         nl0  = nw1
         nl1  = nw2
@@ -67,37 +61,33 @@ def review_file(game,nw1,nw2,nw3):
         nl17 = lr[14]
     
     if game == "N":
-        nw_file = open("res_n.txt","w")
-
-        nw_file.write(nl0)
-        nw_file.write(nl1)
-        nw_file.write(nl2)
-        nw_file.write(nl3)
-        nw_file.write(nl4)
-        nw_file.write(nl5)
+        with open("res_n.txt","w") as nw_file:
+            nw_file.write(nl0)
+            nw_file.write(nl1)
+            nw_file.write(nl2)
+            nw_file.write(nl3)
+            nw_file.write(nl4)
+            nw_file.write(nl5)
     else:
-        nw_file = open("res_l.txt","w")
-
-        nw_file.write(nl0)
-        nw_file.write(nl1)
-        nw_file.write(nl2)
-        nw_file.write(nl3)
-        nw_file.write(nl4)
-        nw_file.write(nl5)
-        nw_file.write(nl6)
-        nw_file.write(nl7)
-        nw_file.write(nl8)
-        nw_file.write(nl9)
-        nw_file.write(nl10)
-        nw_file.write(nl11)
-        nw_file.write(nl12)
-        nw_file.write(nl13)
-        nw_file.write(nl14)
-        nw_file.write(nl15)
-        nw_file.write(nl16)
-        nw_file.write(nl17)
-
-    nw_file.close()
+        with open("res_l.txt","w") as nw_file:
+            nw_file.write(nl0)
+            nw_file.write(nl1)
+            nw_file.write(nl2)
+            nw_file.write(nl3)
+            nw_file.write(nl4)
+            nw_file.write(nl5)
+            nw_file.write(nl6)
+            nw_file.write(nl7)
+            nw_file.write(nl8)
+            nw_file.write(nl9)
+            nw_file.write(nl10)
+            nw_file.write(nl11)
+            nw_file.write(nl12)
+            nw_file.write(nl13)
+            nw_file.write(nl14)
+            nw_file.write(nl15)
+            nw_file.write(nl16)
+            nw_file.write(nl17)
 
     if game == "N":
         return nl0[2:-1],nl1[2:-1],nl2[2:-1],nl3[2:-1],nl4[2:-1],nl5[2:-1]
