@@ -1,4 +1,7 @@
+import os
 import minis as fm
+
+os.system ("cls")
 
 # Main Menu - The user select the type of game
 sel = input("Please select the game you want to analyse (N - Normal | L - Long | X - Salir): ")
@@ -14,7 +17,6 @@ elif sel == "L":
 
     d = fm.review_file("L",a,b,c)
     numbers = fm.convertion(d)
-    print(numbers)
 else:
     quit()
 
